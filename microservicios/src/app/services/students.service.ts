@@ -6,7 +6,12 @@ import {HttpClient} from '@angular/common/http';
 })
 export class StudentsService {
 
-  constructor(private clientHttp:HttpCllient) {
-    
-   }
+  constructor(private clientHttp : HttpClient) {
+
+  }
+
+  getStudents (){
+    return this.clientHttp.get('http://localhost:3000');
+  }
+
 }

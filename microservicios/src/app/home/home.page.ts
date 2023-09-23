@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component, NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 @Component({
@@ -6,8 +9,22 @@ import { IonicModule } from '@ionic/angular';
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
   standalone: true,
-  imports: [IonicModule],
+  imports: [IonicModule, CommonModule, FormsModule, RouterModule],
 })
 export class HomePage {
+  studentName:any;
+  code:any;
+  courseName: any;
+
   constructor() {}
+
+  addStudent(){
+    console.log(this.studentName, this.code, this.courseName);
+  }
+
+  deleteStudent(){
+
+  }
+
+  
 }

@@ -1,8 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Taller CRUD microservicios
-    </ion-title>
+    <ion-title>Editar Estudiante</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -24,20 +22,7 @@
 
   <ion-row>
     <ion-col>
-      <ion-button type="button" (click)="addStudent()" color="primary" shape="full" expand="block">Añadir estudiante</ion-button>
+      <ion-button type="button" (click)="updateStudent()" color="primary" shape="full" expand="block">Editar estudiante</ion-button>
     </ion-col>
   </ion-row>
-
-  <ion-list>
-    <ion-list-header>Lista de estudiantes</ion-list-header>
-
-    <ion-item lines="inset">
-      <ion-label>{{studentName}} - {{code}} - {{courseName}}</ion-label>
-      <div class="item-note">
-        <ion-icon name="create" style="zoom: 2.0" [routerLink]="['/updateStudent/']"></ion-icon>
-        <ion-icon name="trash" style="zoom: 2.0" (click)="deleteStudent()"></ion-icon>
-      </div>
-    </ion-item>
-  </ion-list>
-
 </ion-content>
